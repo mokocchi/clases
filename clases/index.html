@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avisos & Clases de Apoyo | UNLP</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0 30px;
+      border-bottom: 2px solid #000;
+      margin-bottom: 25px;
+    }
+    h1 { font-size: 1.8rem; font-weight: 900; text-transform: uppercase; }
+    p.sub { font-size: 0.95rem; color: #555; margin-top: 5px; }
+    .personal-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .personal-contact a {
+      color: #111;
+    }
+    .discord-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #000;
+      background: #fff;
+      color: #111;
+      padding: 5px 8px;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .discord-copy:hover {
+      background: #eee;
+    }
+    .personal-contact img {
+      width: 44px;
+      height: 44px;
+      border: 1px solid #000;
+      padding: 2px;
+      background: #fff;
+    }
+    
+    .category-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: #000;
+      color: #fff;
+      padding: 4px 10px;
+      display: inline-block;
+      margin: 25px 0 12px 0;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #fff;
+      border: 2px solid #000;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 4px 4px 0px #000;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .card p { font-size: 0.8rem; color: #444; margin-bottom: 15px; }
+
+    .btn-link {
+      display: inline-block;
+      text-align: center;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 3px;
+    }
+    .btn-link:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avisos & Cartelera Digital</h1>
+    <p class="sub">Docente & Graduado UNLP — Clases de Apoyo e Informática</p>
+    <div class="personal-contact" aria-label="Datos de contacto">
+      <a href="assets/wsp.png" target="_blank" rel="noopener">
+        <img src="assets/wsp.png" alt="Código QR de WhatsApp" />
+      </a>
+      <span>WhatsApp · Discord: <strong>kocchi7256</strong></span>
+      <button class="discord-copy" type="button" data-discord="kocchi7256">
+        Copiar
+      </button>
+    </div>
+  </header>
+
+  <!-- CARTEL GENERAL -->
+  <span class="category-title">📢 Cartel General</span>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>Cartel Masivo General</h3>
+        <p>Aviso completo A5 con todas las materias de 1.º a 3.er año y Tesinas.</p>
+      </div>
+      <a href="carteles/masivo.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+  </div>
+
+  <!-- PRIMER AÑO -->
+  <span class="category-title">1.º Año</span>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>CADP & Taller</h3>
+        <p>Lógica, Pascal, Concurrencia, R-Info y Estructuras de Datos.</p>
+      </div>
+      <a href="carteles/cadp.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Matemática 1 y 2</h3>
+        <p>Lógica, Funciones, Inducción, Derivadas e Integrales.</p>
+      </div>
+      <a href="carteles/matematicas.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+  </div>
+
+  <!-- SEGUNDO AÑO -->
+  <span class="category-title">2.º Año</span>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>Orientación a Objetos</h3>
+        <p>OO1 y OO2: Diseño de clases, Refactoring y Patrones GoF.</p>
+      </div>
+      <a href="carteles/objetos.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Bases de Datos & FOD</h3>
+        <p>SQL, Normalización, Álgebra, Archivos e Índices.</p>
+      </div>
+      <a href="carteles/bd-fod.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Ingeniería de Software 1</h3>
+        <p>UML, Casos de Uso, Requerimientos y Testing.</p>
+      </div>
+      <a href="carteles/ingenieria.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+  </div>
+
+  <!-- TERCER AÑO -->
+  <span class="category-title">3.er Año</span>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>Conceptos de Lenguajes</h3>
+        <p>Paradigmas, Tipado, Memoria, Scoping y Concurrencia.</p>
+      </div>
+      <a href="carteles/conceptos.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Redes y Comunicaciones</h3>
+        <p>TCP/IP, Subnetting, Protocolos de Capa y Sockets.</p>
+      </div>
+      <a href="carteles/redes.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Seminario de Lenguajes</h3>
+        <p>Tutoría técnica en Rust, React.js y Node.js.</p>
+      </div>
+      <a href="carteles/seminario.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Proyecto de Software</h3>
+        <p>Mentoría grupal, arquitectura, UML y seguimiento de TPs.</p>
+      </div>
+      <a href="carteles/proyecto.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+  </div>
+
+  <!-- AVANZADOS -->
+  <span class="category-title">Avanzados</span>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h3>Tesina de Grado</h3>
+        <p>Acompañamiento en metodología, arquitectura y redacción.</p>
+      </div>
+      <a href="carteles/tesinas.html" class="btn-link">👁️ Ver / Imprimir</a>
+    </div>
+  </div>
+
+  <script>
+    const discordCopy = document.querySelector('.discord-copy');
+
+    discordCopy.addEventListener('click', async () => {
+      const username = discordCopy.dataset.discord;
+      let copied = false;
+
+      try {
+        await navigator.clipboard.writeText(username);
+        copied = true;
+      } catch {
+        const helper = document.createElement('textarea');
+        helper.value = username;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        copied = document.execCommand('copy');
+        helper.remove();
+      }
+
+      discordCopy.textContent = copied ? 'Copiado' : 'Seleccioná y copiá';
+      window.setTimeout(() => {
+        discordCopy.textContent = 'Copiar';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

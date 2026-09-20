@@ -1,0 +1,159 @@
+/* Shared screen layout for the A5 posters. */
+html {
+  min-width: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  background: #f4f4f4;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  min-height: 0;
+  padding: 16px;
+  gap: 16px;
+  justify-content: flex-start;
+  background: #fff;
+}
+
+.badge {
+  display: inline-block;
+  font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+}
+
+.title {
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  margin-top: 6px;
+}
+
+.content {
+  gap: 16px;
+}
+
+.section-title {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.topic-list {
+  font-size: clamp(0.88rem, 2.8vw, 1rem);
+  line-height: 1.45;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 16px;
+  gap: 12px;
+}
+
+.contact-info {
+  max-width: 68%;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+}
+
+.discord-copy {
+  margin-top: 6px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 4px 8px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.discord-copy:hover {
+  background: #eee;
+}
+
+.qr-placeholder {
+  width: min(150px, 28vw);
+  height: auto;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 24px;
+  }
+
+  .container {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .content {
+    gap: 20px;
+  }
+}
+
+@media print {
+  body {
+    width: 148mm;
+    min-height: 210mm;
+    height: 210mm;
+    padding: 8mm;
+    background: #fff;
+  }
+
+  .container {
+    max-width: none;
+    height: 100%;
+    padding: 6mm;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 16pt;
+  }
+
+  .subtitle {
+    font-size: 8.5pt;
+    margin-top: 0;
+  }
+
+  .content {
+    margin-top: 4mm;
+    gap: 3.5mm;
+  }
+
+  .section-title {
+    font-size: 9pt;
+  }
+
+  .topic-list {
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+
+  .footer {
+    margin-top: 0;
+    padding-top: 3mm;
+  }
+
+  .contact-info {
+    font-size: 8pt;
+  }
+
+  .qr-placeholder {
+    width: 22mm;
+    height: 22mm;
+  }
+}

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Viewport clave para corregir el ancho y renderizado en celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases de Apoyo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        font-size: 16px;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: #000000;
+        background-color: #f4f4f4; /* Fondo neutro para destacar la lámina */
+        padding: 10px; /* Separación responsiva de los bordes de pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Contenedor principal responsive */
+      .container {
+        width: 100%;
+        max-width: 650px; /* Límite max de ancho para mantener proporción de cartel/afiche */
+        margin-top: 52px;
+        border: 2px solid #000000;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: #ffffff;
+      }
+
+      /* Encabezado */
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 14px;
+      }
+
+      .badge {
+        display: inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding: 4px 8px;
+        margin-bottom: 8px;
+      }
+
+      .title {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: -0.3px;
+      }
+
+      .subtitle {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+        font-weight: 600;
+        margin-top: 6px;
+        font-style: italic;
+      }
+
+      /* Oferta académica */
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .section-title {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        font-weight: 800;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 2px 6px;
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+
+      .subject-list {
+        font-size: clamp(0.88rem, 2.8vw, 1rem);
+        line-height: 1.45;
+        padding-left: 12px;
+      }
+
+      .subject-list strong {
+        font-weight: 700;
+      }
+
+      /* Sección destacado mentoría */
+      .highlight-box {
+        border: 1.5px dashed #000000;
+        padding: 12px;
+        background-color: #ffffff;
+      }
+
+      .highlight-title {
+        font-size: clamp(0.9rem, 3vw, 1.05rem);
+        font-weight: 800;
+      }
+
+      .highlight-text {
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        line-height: 1.35;
+        margin-top: 4px;
+      }
+
+      /* Pie de página y QR */
+      .footer {
+        border-top: 2px solid #000000;
+        padding-top: 16px;
+      }
+
+      .qr-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .qr-caption {
+        font-size: clamp(0.9rem, 3vw, 1.05rem);
+        font-weight: 700;
+      }
+
+      .whatsapp-visual {
+        width: min(150px, 45vw);
+        border: 1.5px solid #000000;
+        background: #ffffff;
+        padding: 6px;
+      }
+
+      .whatsapp-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Franjas recortables */
+      .tearoff-title {
+        margin-top: 16px;
+        padding-top: 10px;
+        border-top: 1px dashed #000000;
+        text-align: center;
+        font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      /* Grid responsivo para tiras recortables */
+      .tearoff-grid {
+        display: grid;
+        /* En móviles muestra 2 o 3 columnas que no desbordan */
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 0;
+        margin-top: 8px;
+        border-top: 1px dashed #000000;
+      }
+
+      .tearoff-strip {
+        border-right: 1px dashed #000000;
+        border-left: 1px dashed #000000;
+        margin-left: -1px; /* Solapa bordes dobles */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        padding: 8px 4px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: center;
+        font-size: clamp(0.7rem, 2.2vw, 0.82rem);
+        font-weight: 800;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+      }
+
+      .tearoff-line {
+        display: block;
+      }
+
+      /* Ajustes para pantalla más grande / Tablets o Desktop */
+      @media (min-width: 600px) {
+        body {
+          padding: 24px;
+        }
+
+        .container {
+          padding: 24px;
+          gap: 20px;
+        }
+
+        .tearoff-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .tearoff-strip {
+          height: 170px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botón flotante para imprimir rápido (se oculta automáticamente en la impresión) -->
+    <div
+      class="no-print"
+      style="position: fixed; top: 10px; right: 10px; z-index: 9999"
+    >
+      <button
+        onclick="window.print()"
+        style="
+          background: #000;
+          color: #fff;
+          border: none;
+          padding: 8px 14px;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 4px;
+        "
+      >
+        🖨️ Imprimir A5
+      </button>
+      <a
+        href="../index.html"
+        style="
+          margin-left: 8px;
+          text-decoration: none;
+          color: #000;
+          font-weight: bold;
+        "
+        >← Galería</a
+      >
+    </div>
+
+    <style>
+      /* Regla clave: al imprimir desaparecen los botones de control */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        .container {
+          margin-top: 0;
+        }
+      }
+    </style>
+    <div class="container">
+      <!-- Encabezado -->
+      <div class="header">
+        <div class="badge">Docente & graduado UNLP</div>
+        <h1 class="title">Clases de apoyo & acompañamiento</h1>
+        <p class="subtitle">Licenciatura en Sistemas e Informática — UNLP</p>
+      </div>
+
+      <!-- Contenido / materias -->
+      <div class="content">
+        <!-- Primer año -->
+        <div>
+          <span class="section-title">1º año</span>
+          <p class="subject-list">
+            • <strong>CADP & taller de programación:</strong> Lógica, Pascal,
+            concurrencia y R-Info.<br />
+            • <strong>Matemáticas:</strong> Matemática 1 y matemática 2.
+          </p>
+        </div>
+
+        <!-- Segundo año -->
+        <div>
+          <span class="section-title">2º año</span>
+          <p class="subject-list">
+            • <strong>Objetos:</strong> Orientación a objetos 1 (OO1) y OO2
+            (patrones GoF).<br />
+            • <strong>Datos:</strong> Bases de datos (SQL/álgebra) y FOD
+            (archivos e índices).<br />
+            • <strong>Ingeniería de software 1:</strong> Casos de uso, diagramas
+            y requerimientos.
+          </p>
+        </div>
+
+        <!-- Tercer año -->
+        <div>
+          <span class="section-title">3º año</span>
+          <p class="subject-list">
+            • <strong>Conceptos y paradigmas:</strong> Preparación de parciales
+            y teoría.<br />
+            • <strong>Redes & lenguajes:</strong> TCP/IP, Rust, React, Node.js,
+            Java.
+          </p>
+        </div>
+
+        <!-- Tesinas / proyectos -->
+        <div class="highlight-box">
+          <div class="highlight-title">
+            ★ Mentoría en proyectos & tesina de grado
+          </div>
+          <p class="highlight-text">
+            Revisión de arquitectura, soporte en trabajos prácticos integradores
+            grupales y acompañamiento en la estructuración y redacción de la
+            <strong>tesina final</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer / QR y franjas recortables -->
+      <div class="footer">
+        <div class="qr-contact">
+          <p class="qr-caption">Escaneá para contactarme por WhatsApp</p>
+          <div class="whatsapp-visual">
+            <img
+              src="../assets/wsp.png"
+              alt="Código QR de contacto por WhatsApp"
+            />
+          </div>
+        </div>
+
+        <p class="tearoff-title">Cortá una tira y llevate mi contacto</p>
+        <div class="tearoff-grid" aria-label="Tiras recortables de contacto">
+          <div class="tearoff-strip">
+            <span class="tearoff-line"
+              >Clases de apoyo<br />Promo code: APOYO25<br />Discord:
+              kocchi7256</span
+            >
+          </div>
+          <div class="tearoff-strip">
+            <span class="tearoff-line"
+              >Clases de apoyo<br />Promo code: CLASE10<br />Discord:
+              kocchi7256</span
+            >
+          </div>
+          <div class="tearoff-strip">
+            <span class="tearoff-line"
+              >Clases de apoyo<br />Promo code: UNLP20<br />Discord:
+              kocchi7256</span
+            >
+          </div>
+          <div class="tearoff-strip">
+            <span class="tearoff-line"
+              >Clases de apoyo<br />Promo code: LOGICA7<br />Discord:
+              kocchi7256</span
+            >
+          </div>
+          <div class="tearoff-strip">
+            <span class="tearoff-line"
+              >Clases de apoyo<br />Promo code: APOYO5<br />Discord:
+              kocchi7256</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
