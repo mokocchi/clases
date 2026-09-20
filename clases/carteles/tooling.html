@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviso A5 - Conceptos y Paradigmas de Lenguajes</title>
+    <title>Aviso A5 - Tooling & Dev Tools</title>
     <style>
       @page {
         size: A5 portrait;
@@ -17,10 +17,7 @@
       body {
         width: 148mm;
         height: 210mm;
-        font-family:
-          "Segoe UI",
-          -apple-system,
-          sans-serif;
+        font-family: "Segoe UI", system-ui, sans-serif;
         color: #000;
         background: #fff;
         padding: 8mm;
@@ -60,7 +57,6 @@
         font-weight: 600;
         font-style: italic;
       }
-
       .content {
         margin-top: 4mm;
         display: flex;
@@ -81,7 +77,6 @@
         line-height: 1.4;
         padding-left: 3mm;
       }
-
       .footer {
         border-top: 2px solid #000;
         padding-top: 3mm;
@@ -98,7 +93,6 @@
         height: 22mm;
         border: 1.5px solid #000;
       }
-
       @media print {
         .no-print {
           display: none !important;
@@ -108,7 +102,6 @@
     <link rel="stylesheet" href="../css/carteles-responsive.css" />
   </head>
   <body>
-    <!-- BARRA DE CONTROL EN PANTALLA -->
     <div
       class="no-print"
       style="position: fixed; top: 10px; right: 10px; z-index: 9999"
@@ -138,50 +131,48 @@
         >← Galería</a
       >
     </div>
-
     <div class="container">
       <div class="header">
-        <div class="badge">
-          3.er Año — Licenciatura en Sistemas / Informática
-        </div>
-        <h1 class="title">CONCEPTOS DE LENGUAJES DE PROGRAMACIÓN</h1>
+        <div class="badge">Taller Práctico / Transversal — Todos los años</div>
+        <h1 class="title">TOOLING & ENTORNO DEV</h1>
         <p class="subtitle">
-          Paradigmas, Semántica, Manejo de Memoria & Concurrencia
+          Dominá Bash, Git/GitHub y Docker para tus Proyectos
         </p>
       </div>
-
       <div class="content">
         <div>
-          <span class="section-title">Paradigmas de Programación</span>
+          <span class="section-title">Terminal & Git / GitHub</span>
           <p class="topic-list">
-            • Paradigma Funcional, Lógico, Imperativo y Orientado a Objetos.<br />
-            • Sistemas de tipos: Tipado estático, dinámico, fuerte y débil.<br />
-            • Mecanismos de pasaje de parámetros y evaluación (ansiosa /
-            perezosa).
+            • <strong>Linux / Bash:</strong> Comandos esenciales, pipes,
+            permisos, variables y scripts básicos.<br />
+            • <strong>Git Profesional:</strong> Flujos de trabajo (Gitflow,
+            Feature Branches), rebase y stash.<br />
+            • <strong>Trabajo Grupal:</strong> Resolución de conflictos de
+            merge, Pull Requests y Code Review.
           </p>
         </div>
-
         <div>
-          <span class="section-title">Conceptos Avanzados de Ejecución</span>
+          <span class="section-title">Contenedores & Entornos (Docker)</span>
           <p class="topic-list">
-            • Gestión de memoria: Pila (Stack), Montículo (Heap) y Garbage
-            Collection.<br />
-            • Alcance de variables (Scoping estático vs dinámico) y entornos.<br />
-            • Manejo de excepciones y conceptos de concurrencia.
+            • <strong>Docker:</strong> Imágenes, contenedores, volúmenes,
+            puertos y variables de entorno.<br />
+            • <strong>Docker Compose:</strong> Levantar entornos multi-servicio
+            (App + Base de Datos).<br />
+            • Setup de entornos de desarrollo listos para TPs y proyectos
+            integradores.
           </p>
         </div>
-
         <div style="border: 1.5px dashed #000; padding: 3mm">
           <strong style="font-size: 8.5pt; text-transform: uppercase"
-            >★ Preparación de Exámenes</strong
+            >★ Modalidad Workshop 100% Práctico</strong
           >
           <p style="font-size: 8pt; margin-top: 1mm">
-            Explicación práctica de conceptos teóricos complejos y resolución de
-            preguntas típicas de parciales y finales.
+            Configuramos tu entorno en vivo, resolvemos trabas técnicas de
+            instalación y te preparamos para los requerimientos de la industria
+            y la facultad.
           </p>
         </div>
       </div>
-
       <div class="footer">
         <div class="contact-info">
           <strong>Docente & Graduado UNLP</strong><br />
@@ -202,7 +193,6 @@
         </div>
       </div>
     </div>
-
     <script src="../js/discord-copy.js"></script>
   </body>
 </html>

@@ -1,93 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviso A5 - CADP & Taller de Programación</title>
-  <style>
-    @page { size: A5 portrait; margin: 0; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      width: 148mm; height: 210mm;
-      font-family: 'Segoe UI', -apple-system, sans-serif;
-      color: #000; background: #fff; padding: 8mm;
-      display: flex; flex-direction: column; justify-content: space-between;
-    }
-    .container { border: 3px solid #000; height: 100%; padding: 6mm; display: flex; flex-direction: column; justify-content: space-between; }
-    .header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 4mm; }
-    .badge { background: #000; color: #fff; font-size: 8pt; font-weight: 800; padding: 2px 8px; text-transform: uppercase; }
-    .title { font-size: 16pt; font-weight: 900; margin-top: 2mm; text-transform: uppercase; }
-    .subtitle { font-size: 8.5pt; font-weight: 600; font-style: italic; }
-    
-    .content { margin-top: 4mm; display: flex; flex-direction: column; gap: 3.5mm; }
-    .section-title { font-size: 9pt; font-weight: 800; background: #000; color: #fff; padding: 2px 6px; display: inline-block; text-transform: uppercase; }
-    .topic-list { font-size: 8.5pt; line-height: 1.4; padding-left: 3mm; }
-    
-    .footer { border-top: 2px solid #000; padding-top: 3mm; display: flex; align-items: center; justify-content: space-between; }
-    .contact-info { max-width: 68%; font-size: 8pt; }
-    .qr-placeholder { width: 22mm; height: 22mm; border: 1.5px solid #000; }
-    
-    @media print { .no-print { display: none !important; } }
-  </style>
-  <link rel="stylesheet" href="../css/carteles-responsive.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aviso A5 - CADP & Taller de Programación</title>
+    <style>
+      @page {
+        size: A5 portrait;
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 148mm;
+        height: 210mm;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          sans-serif;
+        color: #000;
+        background: #fff;
+        padding: 8mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .container {
+        border: 3px solid #000;
+        height: 100%;
+        padding: 6mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 4mm;
+      }
+      .badge {
+        background: #000;
+        color: #fff;
+        font-size: 8pt;
+        font-weight: 800;
+        padding: 2px 8px;
+        text-transform: uppercase;
+      }
+      .title {
+        font-size: 16pt;
+        font-weight: 900;
+        margin-top: 2mm;
+        text-transform: uppercase;
+      }
+      .subtitle {
+        font-size: 8.5pt;
+        font-weight: 600;
+        font-style: italic;
+      }
 
-  <!-- BARRA DE CONTROL EN PANTALLA -->
-  <div class="no-print" style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
-    <button onclick="window.print()" style="background:#000; color:#fff; border:none; padding:8px 14px; font-weight:bold; cursor:pointer; border-radius:4px;">🖨️ Imprimir A5</button>
-    <a href="../index.html" style="margin-left: 8px; text-decoration:none; color:#000; font-weight:bold;">← Galería</a>
-  </div>
+      .content {
+        margin-top: 4mm;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5mm;
+      }
+      .section-title {
+        font-size: 9pt;
+        font-weight: 800;
+        background: #000;
+        color: #fff;
+        padding: 2px 6px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+      .topic-list {
+        font-size: 8.5pt;
+        line-height: 1.4;
+        padding-left: 3mm;
+      }
 
-  <div class="container">
-    <div class="header">
-      <div class="badge">1.er Año — Licenciatura en Sistemas / APU</div>
-      <h1 class="title">CADP & TALLER DE PROGRAMACIÓN</h1>
-      <p class="subtitle">Clases de Apoyo & Acompañamiento de Cursada</p>
+      .footer {
+        border-top: 2px solid #000;
+        padding-top: 3mm;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .contact-info {
+        max-width: 68%;
+        font-size: 8pt;
+      }
+      .qr-placeholder {
+        width: 22mm;
+        height: 22mm;
+        border: 1.5px solid #000;
+      }
+
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../css/carteles-responsive.css" />
+  </head>
+  <body>
+    <!-- BARRA DE CONTROL EN PANTALLA -->
+    <div
+      class="no-print"
+      style="position: fixed; top: 10px; right: 10px; z-index: 9999"
+    >
+      <button
+        onclick="window.print()"
+        style="
+          background: #000;
+          color: #fff;
+          border: none;
+          padding: 8px 14px;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 4px;
+        "
+      >
+        🖨️ Imprimir A5
+      </button>
+      <a
+        href="../index.html"
+        style="
+          margin-left: 8px;
+          text-decoration: none;
+          color: #000;
+          font-weight: bold;
+        "
+        >← Galería</a
+      >
     </div>
 
-    <div class="content">
-      <div>
-        <span class="section-title">Conceptos de Algoritmos, Datos y Programas</span>
-        <p class="topic-list">
-          • Lógica de programación estructurada y resolución de problemas.<br>
-          • Registros, arreglos, listas enlazadas y estructuras compuestas en Pascal.<br>
-          • Estrategias de corte de control, ordenamiento y búsqueda.
-        </p>
+    <div class="container">
+      <div class="header">
+        <div class="badge">1.er Año — Licenciatura en Sistemas / APU</div>
+        <h1 class="title">CADP & TALLER DE PROGRAMACIÓN</h1>
+        <p class="subtitle">Clases de Apoyo & Acompañamiento de Cursada</p>
       </div>
 
-      <div>
-        <span class="section-title">Taller de Programación</span>
-        <p class="topic-list">
-          • Módulo Imperativo: Árboles binarios de búsqueda y vectores de listas.<br>
-          • Módulo Concurrente: Entorno R-Info, procesos y sincronización.<br>
-          • Módulo Objetos: Introducción al paradigma orientado a objetos.
-        </p>
+      <div class="content">
+        <div>
+          <span class="section-title"
+            >Conceptos de Algoritmos, Datos y Programas</span
+          >
+          <p class="topic-list">
+            • Lógica de programación estructurada y resolución de problemas.<br />
+            • Registros, arreglos, listas enlazadas y estructuras compuestas en
+            Pascal.<br />
+            • Estrategias de corte de control, ordenamiento y búsqueda.
+          </p>
+        </div>
+
+        <div>
+          <span class="section-title">Taller de Programación</span>
+          <p class="topic-list">
+            • Módulo Imperativo: Árboles binarios de búsqueda y vectores de
+            listas.<br />
+            • Módulo Concurrente: Entorno R-Info, procesos y sincronización.<br />
+            • Módulo Objetos: Introducción al paradigma orientado a objetos.
+          </p>
+        </div>
+
+        <div style="border: 1.5px dashed #000; padding: 3mm">
+          <strong style="font-size: 8.5pt; text-transform: uppercase"
+            >★ Modalidad de Trabajo</strong
+          >
+          <p style="font-size: 8pt; margin-top: 1mm">
+            Resolución guiada de trabajos prácticos, preparación intensiva para
+            parciales y revisión de modelos de exámenes anteriores.
+          </p>
+        </div>
       </div>
 
-      <div style="border: 1.5px dashed #000; padding: 3mm;">
-        <strong style="font-size: 8.5pt; text-transform: uppercase;">★ Modalidad de Trabajo</strong>
-        <p style="font-size: 8pt; margin-top: 1mm;">
-          Resolución guiada de trabajos prácticos, preparación intensiva para parciales y revisión de modelos de exámenes anteriores.
-        </p>
+      <div class="footer">
+        <div class="contact-info">
+          <strong>Docente & Graduado UNLP</strong><br />
+          ✓ Clases Individuales y Grupales<br />
+          ✓ Virtual (prioridad) o presencial<br />
+          🌐 <code>mokocchi.github.io/clases</code> <br />Discord:
+          <strong>kocchi7256</strong>
+          <button class="discord-copy" type="button" data-discord="kocchi7256">
+            Copiar
+          </button>
+        </div>
+        <div class="qr-placeholder">
+          <img
+            src="../assets/wsp.png"
+            alt="Código QR de WhatsApp"
+            style="width: 100%; height: 100%"
+          />
+        </div>
       </div>
     </div>
 
-    <div class="footer">
-      <div class="contact-info">
-        <strong>Docente & Graduado UNLP</strong><br>
-        ✓ Clases Individuales y Grupales<br>
-        ✓ Presencial en Facultad o Virtual<br>
-        🌐 <code>mokocchi.github.io/clases</code>
-        <br>Discord: <strong>kocchi7256</strong>
-        <button class="discord-copy" type="button" data-discord="kocchi7256">Copiar</button>
-      </div>
-      <div class="qr-placeholder">
-        <img src="../assets/wsp.png" alt="Código QR de WhatsApp" style="width:100%; height:100%;">
-      </div>
-    </div>
-  </div>
-
-<script src="../js/discord-copy.js"></script>
-</body>
+    <script src="../js/discord-copy.js"></script>
+  </body>
 </html>
